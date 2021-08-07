@@ -8,14 +8,22 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-
-const elements = ingredients.map(ingredient => {
+const makeIngredientsList = ingredients => {
+  return ingredients.map(ingredient => {
     const liEl = document.createElement('li');
     liEl.textContent = ingredient;
 
     return liEl;
-});
+  });
+};
 
-const ingredientsList = document.querySelector('#ingredients')
-ingredientsList.append(...elements)
+const elements = makeIngredientsList(ingredients);
+
+const ingredientsList = document.querySelector('#ingredients');
+ingredientsList.append(...elements);
+
+
+
+
+
 
